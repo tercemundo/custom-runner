@@ -8,3 +8,4 @@ jobs:
     steps:
       - run: echo 'hello cloud gurus'
       - run: echo $HOSTNAME
+      - run: pwd
