@@ -10,3 +10,5 @@ jobs:
       - run: echo $HOSTNAME
       - run: pwd
       - run: bash /runners/mostrar.sh
+      - run: cd /runners
+      - run bash mostrar.sh
