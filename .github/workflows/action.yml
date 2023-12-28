@@ -9,3 +9,4 @@ jobs:
       - run: echo 'hello cloud gurus'
       - run: echo $HOSTNAME
       - run: pwd
+      - run: bash /runners/mostrar.sh
