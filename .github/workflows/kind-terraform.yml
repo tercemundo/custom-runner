@@ -7,7 +7,6 @@ jobs:
   init:
     runs-on: self-hosted
     steps:
-      - run: [ -d /home/devops/custom-runner ] && cd /home/devops/custom-runner && git pull
       - run: cd /home/devops/custom-runner/kind-terra && sudo terraform init
       - run: cd /home/devops/custom-runner/kind-terra && sudo terraform plan
       - run: cd /home/devops/custom-runner/kind-terra && sudo terraform apply --auto-approve
