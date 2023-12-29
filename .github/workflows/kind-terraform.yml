@@ -1,0 +1,13 @@
+name: Terramform apply
+
+on:
+ workflow_dispatch:
+
+jobs:
+  init:
+    runs-on: self-hosted
+    steps:
+      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform init
+      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform plan
+      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform apply --auto-approve
+  
