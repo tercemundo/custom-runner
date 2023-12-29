@@ -28,3 +28,8 @@ sudo terraform destroy --auto-approve
 rm -fr terraform.tfstate*
 ```
 
+- Si eso no anda (Ultimo recurso)
+
+```
+sudo  kind delete clusters  local-devtron
+```
