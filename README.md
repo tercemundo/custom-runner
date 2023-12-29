@@ -6,3 +6,7 @@ Describimos los pasos
 ```markdown
 echo "devops ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/devops"
 ```
+
+## Partimos de una vm que tenga terraform y kubectl
+
+
