@@ -10,3 +10,15 @@ echo "devops ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/devops"
 ## Partimos de una vm que tenga terraform y kubectl
 
 
+
+## Borrando
+
+```markdown
+sudo kind get kubeconfig --name=local-devtron > /tmp/config
+mv /tmp/config /root/.kube/config
+sudo mv /tmp/config /root/.kube/config
+```
+
+ 
+
+
