@@ -7,7 +7,12 @@ jobs:
   init:
     runs-on: self-hosted
     steps:
-      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform init
-      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform plan
-      - run: cd /home/devops/custom-runner/kind-terra && sudo terraform apply --auto-approve
+      - name: Detect if repo clone
+        run: cd /home/devops/custom-runner && sudo bash detect.sh
+      - name: Terraform init
+        run: cd /home/devops/custom-runner/kind-terra && sudo terraform init
+      - name: Terraform plan
+        run: cd /home/devops/custom-runner/kind-terra && sudo terraform plan
+      - name: Terraform apply
+        run: cd /home/devops/custom-runner/kind-terra && sudo terraform apply --auto-approve
   
