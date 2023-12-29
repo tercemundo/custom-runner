@@ -24,5 +24,7 @@ sudo mv /tmp/config /root/.kube/config
  
 ```markdown
 sudo terraform destroy --auto-approve
+#Luego
+rm -fr terraform.tfstate*
 ```
 
