@@ -19,6 +19,10 @@ mv /tmp/config /root/.kube/config
 sudo mv /tmp/config /root/.kube/config
 ```
 
- 
+ ### A mano, por ahora
 
+ 
+```markdown
+sudo terraform destroy --auto-approve
+```
 
