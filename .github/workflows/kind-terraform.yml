@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Detect if repo clone
-        run: cd /home/devops/custom-runner && sudo bash detect.sh
+        run: cd /home/devops/custom-runner && sudo bash ./detect.sh
       - name: Terraform init
         run: cd /home/devops/custom-runner/kind-terra && sudo terraform init
       - name: Terraform plan
