@@ -3,14 +3,14 @@ name: Must run on custom runner
 #on: push
 
 on:
- workflow_dispatch:
-
-action:
-  description: 'Terraform Action to Perform'
-  type: choice
-  options:
-  - Marcelo
-  - Rodri
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Terraform Action to Perform'
+        type: choice
+        options:
+        - Marcelo
+        - Rodri
  
 
 jobs:
