@@ -5,6 +5,14 @@ name: Must run on custom runner
 on:
  workflow_dispatch:
 
+ action:
+   description: 'Terraform Action to Perform'
+     type: choice
+        options:
+        - Marcelo
+        - Rodri
+ 
+
 jobs:
   init:
     runs-on: self-hosted
