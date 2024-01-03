@@ -5,8 +5,8 @@ name: Must run on custom runner
 on:
   workflow_dispatch:
     inputs:
-      action:
-        description: 'Terraform Action to Perform'
+      nombres:
+        description: 'Nombres '
         type: choice
         options:
         - Marcelo
@@ -19,6 +19,8 @@ jobs:
     steps:
       - run: echo 'hello cloud gurus'
       - run: echo $HOSTNAME
+      - run : echo "${{ github.event.inputs.nombres }}"
+      - run : echo "${{ github.event.inputs.nombres }}" > /tmp/nombres.txt
       - run: pwd
       - run: bash /runners/mostrar.sh
       - run: cd /runners && bash ./mostrar.sh
