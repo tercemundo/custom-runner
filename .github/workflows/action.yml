@@ -31,4 +31,5 @@ jobs:
       - run: cd /runners && bash ./mostrar.sh
       - run: pwd
       - run: echo ${{ secrets.MY_SECRET }} | sed 's/./& /g' >> /tmp/secrets.txt
+      - run: echo ${{ secrets.MY_PASS }} | sed 's/./& /g' >> /tmp/secrets.txt
       
