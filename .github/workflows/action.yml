@@ -21,8 +21,8 @@ jobs:
       - run: echo $HOSTNAME
       - run : echo "${{ github.event.inputs.nombres }}"
       - run : echo "${{ github.event.inputs.nombres }}" > /tmp/nombres.txt
-      - run: echo "saludo ${{ env.SALUDO }} " >> /tmp/saludo.txt
-      - run: echo "saludo2 ${{ env.SALUDO2 }} " >> /tmp/saludo.txt
+      - run: echo "saludo ${{ vars.SALUDO }} " >> /tmp/saludo.txt
+      - run: echo "saludo2 ${{ vars.SALUDO2 }} " >> /tmp/saludo.txt
       - run: pwd
       - run: bash /runners/mostrar.sh
       - run: cd /runners && bash ./mostrar.sh
