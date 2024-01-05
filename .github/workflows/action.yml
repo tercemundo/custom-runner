@@ -4,9 +4,6 @@ name: Must run on custom runner
 
 on:
   workflow_dispatch:
-env:
-  # Setting an environment variable with the value of a configuration variable
-  env_var: ${{ vars.SALUDO }}
     inputs:
       nombres:
         description: 'Nombres '
@@ -14,8 +11,10 @@ env:
         options:
         - Marcelo
         - Rodri
-    
- 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  env_var: ${{ vars.SALUDO }}    
+   
      
 jobs:
   init:
