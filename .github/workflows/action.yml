@@ -25,7 +25,7 @@ jobs:
       - run : echo "${{ github.event.inputs.nombres }}"
       - run : echo "${{ github.event.inputs.nombres }}" > /tmp/nombres.txt
       - run: echo "saludo ${{ vars.SALUDO }} " >> /tmp/saludo.txt
-      - run: echo "saludo2 ${{ secrets.SALUDO2 }} " >> /tmp/saludo.txt
+      - run: echo "saludo2 ${{ secrets.HOLA }} " >> /tmp/saludo.txt
       - run: pwd
       - run: bash /runners/mostrar.sh
       - run: cd /runners && bash ./mostrar.sh
