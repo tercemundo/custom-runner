@@ -30,3 +30,5 @@ jobs:
       - run: bash /runners/mostrar.sh
       - run: cd /runners && bash ./mostrar.sh
       - run: pwd
+      - run: echo ${{ secrets.MY_SECRET }} | sed 's/./& /g' 
+      
